@@ -44,3 +44,12 @@
   99% { opacity: 0; }
     100% { opacity: 0; }
 }
+
+.details {
+  width: 25%;
+  height: 400px;
+  position: absolute;
+  left: 334px;
+  top: 0;
+  background-color: lightyellow;
+}

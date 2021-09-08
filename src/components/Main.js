@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Map from './Map';
 import Satellite from './allotment_satellite.svg';
+import Details from './Details';
 import '../App.css';
 
 
@@ -9,6 +10,7 @@ const Main = () => {
     const [pageLoaded, setPageLoaded] = useState(false);
     const [startPressed, setStartPressed] = useState(false);
     const [transitionFinished, setTransitionFinished] = useState(false);
+    const [areaSelected, setAreaSelected] = useState(null);
   
     useEffect(() => {
         setPageLoaded(true); 
@@ -20,7 +22,7 @@ const Main = () => {
         }, [startPressed]);
   
     const onClick = (e) => {
-      console.log(e.target.id);
+      setAreaSelected(e.target.id);
     }
   
     return (
@@ -42,6 +44,8 @@ const Main = () => {
                         className={startPressed? 'fade-out': 'static'} >START</button>}
                 {startPressed &&
                 <Map onClick={onClick}/>}
+                {areaSelected && <Details areaSelected = {areaSelected} 
+                                        setAreaSelected = {setAreaSelected}/>}
              </div>
             
         </>
