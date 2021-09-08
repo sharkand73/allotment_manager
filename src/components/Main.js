@@ -5,7 +5,7 @@ import Details from './Details';
 import '../App.css';
 
 
-const Main = () => {
+const Main = ({data}) => {
 
     const [pageLoaded, setPageLoaded] = useState(false);
     const [startPressed, setStartPressed] = useState(false);
@@ -45,7 +45,8 @@ const Main = () => {
                 {startPressed &&
                 <Map onClick={onClick}/>}
                 {areaSelected && <Details areaSelected = {areaSelected} 
-                                        setAreaSelected = {setAreaSelected}/>}
+                                        setAreaSelected = {setAreaSelected}
+                                        data = {data}/>}
              </div>
             
         </>
