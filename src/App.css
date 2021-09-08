@@ -2,9 +2,15 @@
   text-align: center;
 }
 
-
 .container > img {
   position: relative;
+}
+
+.container > button {
+  position: absolute;
+  top: 352px;
+  left: 482px;
+  
 }
 
 #map {
@@ -18,6 +24,13 @@
   -webkit-animation: fadeOut 5s;
   -moz-animation: fadeOut 5s;
   -ms-animation: fadeOut 5s;
+}
+
+.fade-out-fast {
+  animation: fadeOut 1.5s;
+  -webkit-animation: fadeOut 1.5s;
+  -moz-animation: fadeOut 1.5s;
+  -ms-animation: fadeOut 1.5s;
 }
 
 @keyframes fadeOut {
