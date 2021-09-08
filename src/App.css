@@ -47,9 +47,13 @@
 
 .details {
   width: 25%;
-  height: 400px;
+  height: 260px;
   position: absolute;
   left: 334px;
   top: 0;
   background-color: lightyellow;
+}
+
+.heading {
+  text-align: center;
 }
