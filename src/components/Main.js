@@ -21,8 +21,13 @@ const Main = ({data}) => {
         setTimeout( () => setTransitionFinished(true), 4900) };
         }, [startPressed]);
   
+    const findById = (id) => {
+        return data.find((item) => (item.id === id));
+    }
+
     const onClick = (e) => {
-      setAreaSelected(e.target.id);
+      const areaClicked = findById(e.target.id);
+      setAreaSelected(areaClicked);
     }
   
     return (

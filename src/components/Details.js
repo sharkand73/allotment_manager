@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Details = ({areaSelected, setAreaSelected, data}) => {
-        console.log(data[0])
+const Details = ({areaSelected, setAreaSelected}) => {
+    
+
+    
     return (
         <div className = 'details'>
-            {/* {data[0]} */}
+            <h1 className = 'heading'>{areaSelected.name}</h1>
+            
         </div>
     )
 }
