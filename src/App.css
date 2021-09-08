@@ -57,3 +57,11 @@
 .heading {
   text-align: center;
 }
+
+#plotInfo {
+  margin-left: 10px;
+}
+
+.key {
+  padding-right: 15px;
+}

@@ -42,6 +42,7 @@ const Main = ({data}) => {
                 <img src={Satellite} 
                     width="1024" 
                     className={startPressed? 'fade-out': 'static'} 
+                    alt='Satellite view'
                     />}
                 {(!transitionFinished) && <button type='button' 
                         onClick = {() => setStartPressed(true)}

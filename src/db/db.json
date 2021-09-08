@@ -6,7 +6,7 @@
             "plot_numbers": [1],
             "description": "full plot",
             "plotholders": ["Conor"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot2",
@@ -14,7 +14,7 @@
             "plot_numbers": [2],
             "description": "full plot",
             "plotholders": ["Lynn"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot3",
@@ -22,7 +22,7 @@
             "plot_numbers": [3],
             "description": "full plot",
             "plotholders": ["Stephen"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot4",
@@ -30,7 +30,7 @@
             "plot_numbers": [4],
             "description": "full plot",
             "plotholders": ["Frank H", "Frank N"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot5",
@@ -38,7 +38,7 @@
             "plot_numbers": [5],
             "description": "full plot",
             "plotholders": ["Jo"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot6",
@@ -46,7 +46,7 @@
             "plot_numbers": [6],
             "description": "full plot",
             "plotholders": ["Lauren", "George"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot7",
@@ -54,7 +54,7 @@
             "plot_numbers": [7],
             "description": "full plot",
             "plotholders": ["Ali"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot8",
@@ -62,7 +62,7 @@
             "plot_numbers": [8],
             "description": "full plot",
             "plotholders": ["Donald"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot9",
@@ -70,7 +70,7 @@
             "plot_numbers": [9],
             "description": "full plot",
             "plotholders": ["Donald"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot10",
@@ -78,7 +78,7 @@
             "plot_numbers": [10],
             "description": "full plot",
             "plotholders": ["Suki", "Sean B"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot11",
@@ -86,7 +86,7 @@
             "plot_numbers": [11],
             "description": "full plot",
             "plotholders": ["Jim", "Rebecca"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot12",
@@ -94,7 +94,7 @@
             "plot_numbers": [12],
             "description": "full plot",
             "plotholders": ["Martin"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot13",
@@ -102,7 +102,7 @@
             "plot_numbers": [13],
             "description": "full plot",
             "plotholders": ["Sapna"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot14",
@@ -110,7 +110,7 @@
             "plot_numbers": [14],
             "description": "full plot",
             "plotholders": ["Paula"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot15",
@@ -118,7 +118,7 @@
             "plot_numbers": [15],
             "description": "full plot",
             "plotholders": ["Tracy", "Steven"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot16",
@@ -126,7 +126,7 @@
             "plot_numbers": [16],
             "description": "full plot",
             "plotholders": ["Ania", "Sean"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot17",
@@ -134,7 +134,7 @@
             "plot_numbers": [17],
             "description": "full plot",
             "plotholders": ["Ania", "Sean"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot18",
@@ -142,7 +142,7 @@
             "plot_numbers": [18],
             "description": "full plot",
             "plotholders": ["Andrew L"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot19",
@@ -150,7 +150,7 @@
             "plot_numbers": [19],
             "description": "full plot",
             "plotholders": ["Alex", "Nicky"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot20",
@@ -158,7 +158,7 @@
             "plot_numbers": [20],
             "description": "full plot",
             "plotholders": ["Charlotte"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot21",
@@ -166,7 +166,7 @@
             "plot_numbers": [21],
             "description": "full plot",
             "plotholders": ["Nikki"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot22",
@@ -174,7 +174,7 @@
             "plot_numbers": [22],
             "description": "full plot",
             "plotholders": ["Lukas", "Jess", "Daisy"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot23",
@@ -182,7 +182,7 @@
             "plot_numbers": [23],
             "description": "full plot",
             "plotholders": ["Bex"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot24",
@@ -190,7 +190,7 @@
             "plot_numbers": [24],
             "description": "full plot",
             "plotholders": ["David", "Patrick"],
-            "flat": false
+            "gradient": "slope"
         },
         {
             "id": "plot25",
@@ -198,7 +198,7 @@
             "plot_numbers": [25],
             "description": "willow",
             "plotholders": null,
-            "flat": false
+            "gradient": "slope"
         }
     ]
   }
