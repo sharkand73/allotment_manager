@@ -26,8 +26,9 @@ const Main = ({data}) => {
     }
 
     const onClick = (e) => {
-      const areaClicked = findById(e.target.id);
-      setAreaSelected(areaClicked);
+        console.log(e.target.id);
+        const areaClicked = findById(e.target.id);
+        setAreaSelected(areaClicked);
     }
   
     return (
