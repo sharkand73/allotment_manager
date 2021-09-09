@@ -442,7 +442,7 @@
         {
             "id": "plot60-62",
             "name": "willow",
-            "plot_numbers": [59],
+            "plot_numbers": [60,61,62],
             "description": "lower willow area",
             "gradient": "flat"
         },

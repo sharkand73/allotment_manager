@@ -8,9 +8,19 @@
 
 .container > button {
   position: absolute;
-  top: 352px;
+  top: 290px;
   left: 482px;
-  
+  width: 12%;
+  height: 8%;
+  font-size: 30px;
+  border-style: ridge;
+  border-width: 8px;
+  border-color: aquamarine;
+  opacity: 0.7;
+}
+
+.container > button:hover {
+  opacity: 1;
 }
 
 #map {
@@ -54,6 +64,12 @@
   padding-top: 5px;
   padding-bottom: 20px;
   background-color: lightyellow;
+}
+
+@media screen and (max-width: 900px) {
+  .details {
+     width: 50%;
+  }
 }
 
 @media screen and (max-width: 900px) {
