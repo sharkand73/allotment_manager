@@ -6,11 +6,12 @@ import React, {useState, useEffect} from 'react';
 function App() {
 
 const [data, setData] = useState([]);
+const url = "https://allotment-manager-default-rtdb.europe-west1.firebasedatabase.app/.json";
 
 useEffect(() => {
-  fetch("http://localhost:5000/plots")
+  fetch(url)
   .then(results => results.json())
-  .then(info => setData(info))
+  .then(info => setData(info.plots))
 }, []);
 
 if (data){

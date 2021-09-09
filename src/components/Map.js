@@ -110,7 +110,7 @@ return (
                />
    </g>
 
-   <g className="plot"> onClick={onClick}
+   <g className="plot" onClick={onClick}>
          <text id="text13" className="number" transform="translate(1.0583333)">
          <tspan x="149.0625" y="56.149016">13</tspan></text>
          <path id="plot13" className="plotpath"
