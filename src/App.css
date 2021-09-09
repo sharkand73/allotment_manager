@@ -10,9 +10,12 @@
   position: absolute;
   top: 290px;
   left: 482px;
-  width: 12%;
-  height: 8%;
-  font-size: 30px;
+  width: 18%;
+  padding-left: 0;
+  padding-right: 0;
+  height: 9%;
+  background-color: white;
+  font-weight: bold;
   border-style: ridge;
   border-width: 8px;
   border-color: aquamarine;
