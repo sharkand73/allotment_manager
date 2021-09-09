@@ -51,11 +51,15 @@
   position: absolute;
   left: 334px;
   top: 0;
+  padding-right: 5px;
+  padding-top: 5px;
   background-color: lightyellow;
 }
 
 .heading {
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
 }
 
 #plotInfo {
@@ -63,5 +67,21 @@
 }
 
 .key {
-  padding-right: 15px;
+  padding-right: 40px;
+  padding-bottom: 5px;
+}
+
+.X {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  font-weight: bold;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.X:hover {
+  color: green;
+  cursor: pointer;
 }
