@@ -1,20 +1,35 @@
 import React from 'react';
 import '../map.css';
 
-const Map = ({onClick}) => {
+const Map = ({onClick, data}) => {
 
+const findIndexById = (id) => {
+      return data.findIndex((item) => (item.id === id));
+      }
+
+const isPaid = (plotId) => {
+      const plotIndex = findIndexById(plotId);
+      return data[plotIndex].paid;
+}
+
+//console.log(isPaid("plot1"));
+
+const plotClass = (plotId) => {
+      //return "plot";
+      return isPaid(plotId)?"paid":"plot";
+}
 
 return (
-<>
+
 <svg
    width="1024"
    viewBox="0 0 297 210"
    version="1.1"
    id="map"
-   className="fade-in">
+   >
    
 <g id="layer0">
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot1")} onClick={onClick}>
          <text id="text1" className="number" transform="translate(2.0634698,3.233271)">
          <tspan x="38.798828" y="47.203703">1</tspan></text>
          <path className="plotpath" id="plot1"
@@ -22,7 +37,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot2")} onClick={onClick}>
          <text id="text2" className="number" transform="translate(13.37623,2.5471355)">
          <tspan x="38.798828" y="48.491101">2</tspan></text>
          <path className="plotpath" id="plot2"
@@ -30,7 +45,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot3")} onClick={onClick}>
          <text id="text3" className="number" transform="translate(23.921208,3.5108356)">
          <tspan x="38.798828" y="48.491101">3</tspan></text>
          <path className="plotpath" id="plot3"
@@ -38,7 +53,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot4")} onClick={onClick}>
          <text id="text4" className="number">
          <tspan x="72.9729" y="52.669144">4</tspan></text>
          <path className="plotpath" id="plot4"
@@ -46,7 +61,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot5")} onClick={onClick}>
          <text id="text5" className="number">
          <tspan x="82.119141" y="52.811414">5</tspan></text>
          <path className="plotpath" id="plot5"
@@ -54,7 +69,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot6")} onClick={onClick}>
          <text id="text6" className="number">
          <tspan x="89.757812" y="53.918836">6</tspan></text>
          <path className="plotpath" id="plot6"
@@ -62,7 +77,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot7")} onClick={onClick}>
          <text id="text7" className="number" transform="translate(0,2.1166667)">
          <tspan x="99.306641" y="52.430266">7</tspan></text>
          <path className="plotpath" id="plot7"
@@ -70,7 +85,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot8")} onClick={onClick}>
          <text id="text8" className="number" transform="translate(0,2.1166667)">
          <tspan x="108.85547" y="53.434172">8</tspan></text>
          <path id="plot8" className="plotpath"
@@ -78,7 +93,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot9")} onClick={onClick}>
          <text id="text9" className="number" transform="translate(0,1.5875)">
          <tspan x="115.58984" y="53.938078">9</tspan></text>
          <path id="plot9" className="plotpath"
@@ -86,7 +101,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot10")} onClick={onClick}>
          <text  id="text10" className="number" transform="translate(0,1.5875)">
          <tspan x="122.72656" y="54.13925"><tspan>10</tspan></tspan></text>
          <path id="plot10" className="plotpath"
@@ -94,7 +109,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot11")} onClick={onClick}>
          <text id="text11" className="number" transform="translate(0.52916667,1.5875)">
          <tspan x="130.96875" y="54.842375">11</tspan></text>
          <path id="plot11" className="plotpath"
@@ -102,7 +117,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot12")} onClick={onClick}>
          <text id="text12" className="number" transform="translate(1.0583333)">
          <tspan x="139.41211" y="55.846281">12</tspan></text>
          <path id="plot12" className="plotpath"
@@ -110,7 +125,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot13")} onClick={onClick}>
          <text id="text13" className="number" transform="translate(1.0583333)">
          <tspan x="149.0625" y="56.149016">13</tspan></text>
          <path id="plot13" className="plotpath"
@@ -118,7 +133,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot14")} onClick={onClick}>
          <text id="text14" className="number">
          <tspan x="159.61523" y="56.449797">14</tspan></text>
          <path id="plot14" className="plotpath"
@@ -126,7 +141,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot15")} onClick={onClick}>
          <text id="text15" className="number">
          <tspan x="168.16016" y="56.95175"><tspan>15</tspan></tspan></text>
          <path id="plot15" className="plotpath"
@@ -134,7 +149,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot16")} onClick={onClick}>
          <text id="text16" className="number">
          <tspan x="177.60742" y="56.650969">16</tspan></text>
          <path id="plot16" className="plotpath"
@@ -142,7 +157,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot17")} onClick={onClick}>
          <text id="text17" className="number">
          <tspan x="188.66406" y="57.053313"><tspan>17</tspan></tspan></text>
          <path id="plot17" className="plotpath"
@@ -150,7 +165,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot18")} onClick={onClick}>
          <text id="text18" className="number" transform="translate(0.52916667)">
          <tspan x="198.21289" y="57.152922">18</tspan></text>
          <path id="plot18" className="plotpath"
@@ -158,7 +173,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot19")} onClick={onClick}>
          <text id="text19" className="number">
          <tspan x="208.26367" y="57.254484">19</tspan></text>
          <path id="plot19" className="plotpath"
@@ -166,7 +181,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot20")} onClick={onClick}>
          <text id="text20" className="number">
          <tspan x="216.80859" y="58.059172">20</tspan></text>
          <path id="plot20" className="plotpath"
@@ -174,7 +189,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot21")} onClick={onClick}>
          <text id="text21" className="number">
          <tspan x="226.15625" y="58.258391">21</tspan></text>
          <path id="plot21" className="plotpath"
@@ -182,7 +197,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot22")} onClick={onClick}>
          <text id="text22" className="number">
          <tspan x="235.30273" y="58.258391">22</tspan></text>
          <path id="plot22" className="plotpath"
@@ -190,7 +205,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot23")} onClick={onClick}>
          <text id="text23" className="number">
          <tspan x="245.55469" y="58.660734">23</tspan></text>
          <path id="plot23" className="plotpath"
@@ -198,7 +213,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot24")} onClick={onClick}>
          <text id="text24" className="number" transform="translate(1.0583333)">
          <tspan x="256.10938" y="58.762297">24</tspan></text>
          <path id="plot24" className="plotpath"
@@ -214,7 +229,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className="paid" onClick={onClick}>
          <text id="text46-48" className="number" transform="translate(-223.23274,41.864373)">
          <tspan x="266.96484" y="58.158781">46-48</tspan></text>
          <path id="orchard" className="plotpath"
@@ -222,7 +237,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot45")} onClick={onClick}>
          <text id="text45" className="number" transform="translate(-198.57343,42.922706)">
          <tspan x="266.96484" y="58.158781">45</tspan></text>
          <path id="plot45" className="plotpath"
@@ -230,7 +245,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot44")} onClick={onClick}>
          <text id="text44" className="number" transform="translate(-188.49372,43.102702)">
          <tspan x="266.96484" y="58.158781">44</tspan></text>
          <path id="plot44" className="plotpath"
@@ -238,7 +253,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot43")} onClick={onClick}>
          <text id="text43" className="number" transform="translate(-178.594,43.282695)">
          <tspan x="266.96484" y="58.158781">43</tspan></text>
          <path id="plot43" className="plotpath"
@@ -246,7 +261,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot42")} onClick={onClick}>
          <text id="text42" className="number" transform="translate(-170.49423,44.013493)">
          <tspan x="266.96484" y="58.158781">42</tspan></text>
          <path id="plot42" className="plotpath"
@@ -254,7 +269,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot41")} onClick={onClick}>
          <text id="text41" className="number" transform="translate(-161.31448,44.002677)">
          <tspan x="266.96484" y="58.158781">41</tspan></text>
          <path id="plot41" className="plotpath"
@@ -262,7 +277,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot40")} onClick={onClick}>
          <text id="text40" className="number" transform="translate(-152.68554,44.553479)">
          <tspan x="266.96484" y="58.158781">40</tspan></text>
          <path id="plot40" className="plotpath"
@@ -270,7 +285,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot39")} onClick={onClick}>
          <text id="text39" className="number" transform="translate(-143.70743,44.18267)">
          <tspan x="266.96484" y="58.158781">39</tspan></text>
          <path id="plot39" className="plotpath"
@@ -278,7 +293,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot38")} onClick={onClick}>
          <text id="text38" className="number" transform="translate(-133.95526,43.124337)">
          <tspan x="266.96484" y="58.158781">38</tspan></text>
          <path id="plot38" className="plotpath"
@@ -294,7 +309,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot35")} onClick={onClick}>
          <text id="text35" className="number" transform="translate(-102.63614,40.402777)">
          <tspan x="266.96484" y="58.158781">35</tspan></text>
          <path id="plot35" className="plotpath"
@@ -302,7 +317,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot34")} onClick={onClick}>
          <text id="text34" className="number" transform="translate(-94.17638,39.927699)">
          <tspan x="266.96484" y="58.158781">34</tspan></text>
          <path id="plot34" className="plotpath"
@@ -310,7 +325,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot33")} onClick={onClick}>
          <text id="text33" className="number" transform="translate(-84.096665,38.59201)">
          <tspan x="266.96484" y="58.158781">33</tspan></text>
          <path id="plot33" className="plotpath"
@@ -318,7 +333,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot32")} onClick={onClick}>
          <text id="text32" className="number" transform="translate(-74.499638,37.823544)">
          <tspan x="266.96484" y="58.158781">32</tspan></text>
          <path id="plot32" className="plotpath"
@@ -326,7 +341,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot31")} onClick={onClick}>
          <text id="text31" className="number" transform="translate(-64.786047,36.574852)">
          <tspan x="266.96484" y="58.158781">31</tspan></text>
          <path id="plot31" className="plotpath"
@@ -334,7 +349,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot30")} onClick={onClick}>
          <text id="text30" className="number" transform="translate(-53.993169,35.495563)">
          <tspan x="266.96484" y="58.158781">30</tspan></text>
          <path id="plot30" className="plotpath"
@@ -342,7 +357,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot29")} onClick={onClick}>
          <text id="text29" className="number" transform="translate(-42.349621,34.685512)">
          <tspan x="266.96484" y="58.158781">29</tspan></text>
          <path id="plot29" className="plotpath"
@@ -350,7 +365,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className="paid" onClick={onClick}>
          <text id="text26-28" className="number" transform="translate(-24.812139,33.763503)">
          <tspan x="266.96484" y="58.158781">26-28</tspan></text>
          <path id="plot26-28" className="plotpath"
@@ -358,7 +373,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot49")} onClick={onClick}>
          <text id="text49" className="number" transform="translate(-235.17219,89.184485)">
          <tspan x="266.96484" y="58.158781">49</tspan></text>
          <path id="plot49" className="plotpath"
@@ -366,7 +381,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot50")} onClick={onClick}>
          <text id="text50" className="number" transform="translate(-226.29147,89.660315)">
          <tspan x="266.96484" y="58.158781">50</tspan></text>
          <path id="plot50" className="plotpath"
@@ -374,7 +389,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot51")} onClick={onClick}>
          <text id="text51" className="number" transform="translate(-218.0957,89.660315)">
          <tspan x="266.96484" y="58.158781">51</tspan></text>
          <path id="plot51" className="plotpath"
@@ -382,7 +397,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot52")} onClick={onClick}>
          <text id="text52" className="number" transform="translate(-211.14284,89.475739)">
          <tspan x="266.96484" y="58.158781">52</tspan></text>
          <path id="plot52" className="plotpath"
@@ -390,7 +405,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot53")} onClick={onClick}>
          <text id="text53" className="number" transform="translate(-202.31546,88.761996)">
          <tspan x="266.96484" y="58.158781">53</tspan></text>
          <path id="plot53" className="plotpath"
@@ -398,7 +413,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot54")} onClick={onClick}>
          <text  id="text54" className="number" transform="translate(-193.16803,87.757)">
          <tspan x="266.96484" y="58.158781">54</tspan></text>
          <path id="plot54" className="plotpath"
@@ -406,7 +421,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot55")} onClick={onClick}>
          <text id="text55" className="number" transform="translate(-184.54977,86.805344)">
          <tspan x="266.96484" y="58.158781">55</tspan></text>
          <path id="plot55" className="plotpath"
@@ -414,7 +429,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot56")} onClick={onClick}>
          <text id="text56" className="number" transform="translate(-178.12609,78.716256)">
          <tspan x="266.96484" y="58.158781">56</tspan></text>
          <path id="plot56" className="plotpath"
@@ -422,7 +437,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot57")} onClick={onClick}>
          <text id="text57" className="number" transform="translate(-158.77289,72.792958)">
          <tspan x="266.96484" y="58.158781">57</tspan></text>
          <path id="plot57" className="plotpath"
@@ -430,7 +445,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot58")} onClick={onClick}>
          <text id="text58" className="number" transform="translate(-137.20482,69.67551)">
          <tspan x="266.96484" y="58.158781">58</tspan></text>
          <path id="plot58" className="plotpath"
@@ -438,7 +453,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot59")} onClick={onClick}>
          <text id="text59" className="number" transform="translate(-109.36884,65.630965)">
          <tspan x="266.96484" y="58.158781">59</tspan></text>
          <path id="plot59" className="plotpath"
@@ -446,7 +461,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot63")} onClick={onClick}>
          <text id="text63" className="number" transform="translate(-86.237813,68.563839)">
          <tspan x="266.96484" y="58.158781">63</tspan></text>
          <path id="plot63" className="plotpath"
@@ -454,7 +469,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot64")} onClick={onClick}>
          <text id="text64" className="number" transform="translate(-77.910812,67.11179)">
          <tspan x="266.96484" y="58.158781">64</tspan></text>
          <path id="plot64" className="plotpath"
@@ -462,7 +477,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot65")} onClick={onClick}>
          <text id="text65" className="number" transform="translate(-68.447576,65.208475)">
          <tspan x="266.96484" y="58.158781">65</tspan></text>
          <path id="plot65" className="plotpath"
@@ -470,7 +485,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot66")} onClick={onClick}>
          <text id="text66" className="number" transform="translate(-59.751423,63.834327)">
          <tspan x="266.96484" y="58.158781">66</tspan></text>
          <path id="plot66" className="plotpath"
@@ -478,7 +493,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot67")} onClick={onClick}>
          <text id="text67" className="number" transform="translate(-51.211067,61.057256)">
          <tspan x="266.96484" y="58.158781">67</tspan></text>
          <path id="plot67" className="plotpath"
@@ -486,7 +501,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot68")} onClick={onClick}>
          <text id="text68" className="number" transform="translate(-42.937404,60.581426)">
          <tspan x="266.96484" y="58.158781">68</tspan></text>
          <path id="plot68" className="plotpath"
@@ -494,7 +509,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot69")} onClick={onClick}>
          <text id="text69" className="number" transform="translate(-34.187913,58.862688)">
          <tspan x="266.96484" y="58.158781">69</tspan></text>
          <path id="plot69" className="plotpath"
@@ -502,7 +517,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot70")} onClick={onClick}>
          <text id="text70" className="number" transform="translate(-23.904257,57.197289)">
          <tspan x="266.96484" y="58.158781">70</tspan></text>
          <path id="plot70" className="plotpath"
@@ -510,7 +525,7 @@ return (
                />
    </g>
 
-   <g className="plot" onClick={onClick}>
+   <g className={plotClass("plot71")} onClick={onClick}>
          <text id="text71" className="number" transform="translate(-12.537707,54.580229)">
          <tspan x="266.96484" y="58.158781">71</tspan></text>
          <path id="plot71" className="plotpath"
@@ -583,7 +598,6 @@ return (
       id="gate" />
   </g>
 </svg>
-</>
 )
 }
 

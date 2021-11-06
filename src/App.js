@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
 
-const [data, setData] = useState([]);
+const [data, setData] = useState(null);
 const url = "https://allotment-manager-default-rtdb.europe-west1.firebasedatabase.app/.json";
 
 useEffect(() => {

@@ -4,7 +4,7 @@ const Details = ({areaSelected, setAreaSelected}) => {
 
     let tableInfo = [];
     for(let key in areaSelected){
-        if (key !== 'id' && areaSelected[key]){
+        if (key !== 'id'){
         tableInfo.push(
             <tr key={key}>
                 <td className='key'>{key}:</td>
