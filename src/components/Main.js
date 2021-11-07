@@ -33,9 +33,9 @@ const Main = ({data}) => {
                                             setAreaSelected = {setAreaSelected}
                                             data = {data}/>}
                 </div>
-                <div>
+                <div id="fee-tally">
                  <FeeTally data = {data} />
-             </div>
+                </div>
              </div>
              
             
